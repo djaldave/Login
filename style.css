@@ -4,14 +4,14 @@ html,body {
 body{
 
 }
-.hero{
+.container{
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: #464646;
 }
-.hero::before {
+.container::before {
 	content: "";
 	background-image: url('img/1920x1080-Hd-Wallpaper-Background.jpg');
 	background-size: cover;
