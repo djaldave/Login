@@ -31,10 +31,7 @@ function addClass(varName) {
 
 
 }
-function removeClass(varName) {
-	var element = document.getElementById(varName);
-	element.classList.remove("alert alert-success alert-dismissible fade show alertMsg");
-}
+
 function allFunc(varName) {
 	addClass(varName);
 	showMsg(varName);
