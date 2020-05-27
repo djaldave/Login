@@ -23,6 +23,7 @@ function showMsg(varName)
 }
 function clearInputs() {
 	document.getElementById("username").value = '';
+	document.getElementById("username").focus();
 	document.getElementById("password").value = '';
 }
 function addClass(varName) {
@@ -35,7 +36,6 @@ function addClass(varName) {
 function allFunc(varName) {
 	addClass(varName);
 	showMsg(varName);
-	// removeClass();
 	clearInputs();
 
 }

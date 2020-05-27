@@ -1,19 +1,40 @@
 html,body {
 	height: 100%;
 }
+body{
 
+}
+.hero{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+}
+.hero::before {
+	content: "";
+	background-image: url('img/1920x1080-Hd-Wallpaper-Background.jpg');
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 70%;
+}
 .global-container{
 	height:100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #f5f5f5;
+	background-color: #f4f4f4;
 }
 
 form{
 	padding-top: 10px;
 	font-size: 14px;
 	margin-top: 0;
+	margin-bottom: 0;
 }
 form .avatar {
 	color: #fff;
@@ -26,6 +47,7 @@ form .avatar {
 	background: #007BFF;
 	padding: 15px;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
 }
 form .avatar i {
 	font-size: 62px;
@@ -37,16 +59,12 @@ form .avatar i {
 	margin-top:0;
 }
 
-
 .login-form{
 	width:330px;
 	margin:0;
 }
 
-
 .alert{
-	/*margin-bottom:-30px;*/
 	font-size: 13px;
-	margin-top:0;
 
 }
