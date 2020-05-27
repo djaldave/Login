@@ -18,7 +18,7 @@ if(document.getElementsByClassName('firstForm')[0]){
 function showMsg(varName)
 {
 	$("#"+varName).fadeIn('slow', function () {
-		$(this).delay(3000).fadeOut('slow');
+		$(this).delay(3200).fadeOut('slow');
 	});
 }
 function clearInputs() {

@@ -35,6 +35,7 @@ form{
 	font-size: 14px;
 	margin-top: 0;
 	margin-bottom: 0;
+	display: block;
 }
 form .avatar {
 	color: #fff;
@@ -52,13 +53,28 @@ form .avatar {
 form .avatar i {
 	font-size: 62px;
 }
+#pop, #pop1{
+	display: none;
+	text-align: left;
+}
+#button, #button1{
+	font-size: 18px;
+}
+.card{
+	width: 200px;
+	margin: 0 auto;
+}
+.card1{
+	margin: 20px auto 0;
+	width: 200px;
+}
+
 .card-title{ font-weight:300; }
 
 .btn{
 	font-size: 14px;
 	margin-top:0;
 }
-
 .login-form{
 	width:330px;
 	margin:0;
