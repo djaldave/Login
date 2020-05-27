@@ -23,7 +23,7 @@ function showMsg(varName)
 }
 function clearInputs() {
 	document.getElementById("username").value = '';
-	document.getElementById("username").focus();
+	// document.getElementById("username").focus(); // not suitable for mobile
 	document.getElementById("password").value = '';
 }
 function addClass(varName) {
