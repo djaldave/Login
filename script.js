@@ -24,6 +24,7 @@ function showMsg(varName)
 function clearInputs() {
 	document.getElementById("username").value = '';
 	// document.getElementById("username").focus(); // not suitable for mobile
+	document.activeElement.blur();
 	document.getElementById("password").value = '';
 }
 function addClass(varName) {
