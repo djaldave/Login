@@ -1,20 +1,5 @@
-if(document.getElementsByClassName('firstForm')[0]){
-	document.getElementsByClassName('firstForm')[0].onsubmit = function(e){
-		document.getElementById("pop").style.display = "none";
-		e.preventDefault();
-		const field = this;
-		let username = field.querySelector('input[type=email]');
-		let pass = field.querySelector('input[type=password]');
 
-		if((username.value === 'admin' && pass.value === 'admin') ){
-			allFunc('pop');
-		}else if ((username.value === 'user' && pass.value === 'user') ){
-			allFunc('pop1');
-		} else {
-			alert('Credentials are invalid');
-		}
-	}
-}
+// functions ------------------------------------------------------
 function showMsg(varName)
 {
 	$("#"+varName).fadeIn('slow', function () {
@@ -40,3 +25,22 @@ function allFunc(varName) {
 	clearInputs();
 
 }
+
+// -------------------------------------------------------
+if(document.getElementsByClassName('firstForm')[0]) {
+	document.getElementsByClassName('firstForm')[0].onsubmit = function (e) {
+		e.preventDefault();
+		const field = this;
+		let username = field.querySelector('input[type=email]');
+		let pass = field.querySelector('input[type=password]');
+		if ((username.value === 'admin' && pass.value === 'admin')) {
+			allFunc('pop');
+		} else if ((username.value === 'user' && pass.value === 'user')) {
+			allFunc('pop1');
+		} else {
+			alert('Credentials are invalid');
+		}
+	}
+}
+	
+
