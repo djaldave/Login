@@ -6,49 +6,47 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--    css external-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="bootstrap%20files/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-
-    <title>Al Dave</title>
+    <script src="bootstrap%20files/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="bootstrap%20files/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <title>Login</title>
 </head>
 <body>
 <div class="global-container container">
-    <div class="card login-form" style="-webkit-box-shadow: 6px 2px 17px -3px rgba(115,115,115,0.74);"> <!-- I put some css here to override the bootstrap   -->
-        <div id="pop" class="card1">
-            <strong>It Works!!</strong>
+    <div class="card login-form col-md-4" style="-webkit-box-shadow: 6px 2px 17px -3px rgba(115,115,115,0.74);background-color: #349721;"> <!-- I put some css here to override the bootstrap   -->
+        <div id="pop2" class="card1">
+            <strong>Please Wait..</strong>
             <button type="button" class="close"  data-dismiss="alert" id="button">&times;</button>
         </div>
         <div class="card-body">
             <div class="card-text">
                 <form class="firstForm" novalidate >
-                    <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
-                    <h3 class="card-title text-center">Log in</h3>
+                    <h3 class="card-title text-center mb-4">M & W Inventory</h3>
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="email" class="form-control form-control-sm" id="username" aria-describedby="emailHelp">
+                        <input type="text" id="username" placeholder="Username" class="form-control form-control-sm" >
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control form-control-sm" id="password">
+                        <input type="password" id="password" placeholder="Password" class="form-control form-control-sm mb-2">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block" >Sign in</button>
+                    <button type="submit" class="btn btn-block btn-log" id="sign-in" >Sign in</button>
                 </form>
             </div>
 
         </div>
         <div  id="pop1" class="card">
-            <strong>It Works!!</strong>
+            <strong>Please Wait..</strong>
             <button type="button" class="close"  data-dismiss="alert" id="button1">&times;</button>
         </div>
     </div>
 
 </div>
 <!--Javascript-->
+<script src="bootstrap%20files/js/jquery-3.4.1.slim.min.js"></script>
+<script src="bootstrap%20files/js/popper.min.js"></script>
+<script src="bootstrap%20files/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script >
     // functions ------------------------------------------------------
     function showMsg(varName)
@@ -59,9 +57,14 @@
     }
     function clearInputs() {
         document.getElementById("username").value = '';
+        document.getElementById("username").disabled = true;
         // document.getElementById("username").focus(); // not suitable for mobile
         document.activeElement.blur();
         document.getElementById("password").value = '';
+        document.getElementById("password").disabled = true;
+        document.getElementById("sign-in").disabled = true;
+
+
     }
     function addClass(varName) {
         let v = document.getElementById(varName);
@@ -82,16 +85,24 @@
         document.getElementsByClassName('firstForm')[0].onsubmit = function (e) {
             e.preventDefault();
             const field = this;
-            let username = field.querySelector('input[type=email]');
+            let username = field.querySelector('input[type=text]');
             let pass = field.querySelector('input[type=password]');
+
             if ((username.value === 'admin' && pass.value === 'admin')) {
-                allFunc('pop');
+                allFunc('pop2');
+                setTimeout(load, 3000);
+
+
             } else if ((username.value === 'user' && pass.value === 'user')) {
                 allFunc('pop1');
+                setTimeout(load, 3000);
             } else {
                 alert('Credentials are invalid');
             }
         }
+    }
+    function load() {
+        window.location.href ="homepage.html";
     }
 </script>
 </body>
