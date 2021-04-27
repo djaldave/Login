@@ -88,7 +88,7 @@
             let username = field.querySelector('input[type=text]');
             let pass = field.querySelector('input[type=password]');
 
-            if ((username.value === 'admin' && pass.value === 'admin')) {
+            if ((username.value.toLocaleLowerCase() === 'admin' && pass.value === 'admin')) {
                 allFunc('pop2');
                 setTimeout(load, 3000);
 
